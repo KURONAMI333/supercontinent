@@ -1,33 +1,33 @@
-# Supercontinent (SC)
+# Supercontinent
 
-> Overworld with near-zero ocean, one massive contiguous continent. Oceanic structures relocate to inland oases.
+> Overworld is one massive contiguous landmass. The ocean is near-zero — a thin boundary belt at the edges. Oceanic structures relocate to inland oasis lakes.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Modrinth](https://img.shields.io/badge/Modrinth-supercontinent-00AF5C)](https://modrinth.com/mod/supercontinent)
-[![CurseForge](https://img.shields.io/badge/CurseForge-supercontinent-F16436)](https://www.curseforge.com/minecraft/mc-mods/supercontinent)
+[![NeoForge 1.21.1](https://img.shields.io/badge/NeoForge-1.21.1-orange.svg)](https://neoforged.net)
+[![Depends on Isekai API](https://img.shields.io/badge/Depends-Isekai%20API-9333ea)](https://github.com/KURONAMI333/isekai-api)
 
 ---
 
-## Supported Loaders / Versions
+## Concept
 
-| Minecraft | NeoForge | Forge | Fabric |
-|---|:---:|:---:|:---:|
-| 1.21.1 | TBD | TBD | TBD |
-| 1.20.1 |  —  | TBD | TBD |
+Minecraft normally lets you sail off the edge of a landmass and find another. Supercontinent removes that experience entirely. The overworld is a *single* continent — tens of thousands of blocks across, all biomes meeting at internal borders rather than across coastlines. You can walk for in-game weeks without seeing the sea.
 
-(TBD: 実装後に更新)
+For players who want to "go inland", explore by foot/horse/cart for the long haul, and never run out of contiguous terrain.
 
----
+## How it works
 
-## Why?
+Supercontinent is built on **[Isekai API](https://github.com/KURONAMI333/isekai-api)**, a neutral universal worldgen library.
 
-(目的、解決する問題を 2-3 行で)
+This is intended to be a **datapack-first consumer**: most of the worldshape is expressible in JSON using Isekai's density primitives (`add`, `distance`, `step`, `clamp`) and rule-adaptation primitives, with minimal Java code. It's the showcase for how lightly a consumer can lean on the library.
 
-## Installation
+## Status
 
-1. ローダー導入
-2. 依存 MOD 導入（あれば）
-3. `supercontinent-X.Y.Z-{loader}-{mc}.jar` を `mods/` に配置
+**v0.1**: skeleton. JSON datapack + minimal Java glue land with Isekai API v0.2.
+
+## Dependencies
+
+- NeoForge 1.21.1
+- [Isekai API](https://github.com/KURONAMI333/isekai-api) (required)
 
 ## License
 
